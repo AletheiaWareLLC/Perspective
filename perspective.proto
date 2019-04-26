@@ -1,0 +1,92 @@
+/*
+ * Copyright 2019 Aletheia Ware LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+syntax = "proto3";
+
+option go_package = "github.com/AletheiaWareLLC/perspectivego";
+option java_outer_classname = "PerspectiveProto";
+option java_package = "com.aletheiaware.perspective";
+option optimize_for = LITE_RUNTIME;
+
+package perspective;
+
+message World {
+    string name = 1;
+    uint32 size = 2;
+    repeated bytes puzzle = 3;
+    map<string, bytes> shader = 4;
+}
+
+message Location {
+    int32 w = 1;
+    int32 x = 2;
+    int32 y = 3;
+    int32 z = 4;
+}
+
+message Outline {
+    string type = 1;// Mesh name
+    string colour = 2;// Mesh colour
+}
+
+message Block {
+    string name = 1;// Unique ID
+    string type = 2;// Mesh name
+    string colour = 3;// Mesh colour
+    Location location = 4;
+}
+
+message Goal {
+    string name = 1;// Unique ID
+    string type = 2;// Mesh name
+    string colour = 3;// Mesh colour
+    Location location = 4;
+}
+
+message Portal {
+    string name = 1;// Unique ID
+    string type = 2;// Mesh name
+    string colour = 3;// Mesh colour
+    Location location = 4;
+    Location link = 5;
+}
+
+message Sphere {
+    string name = 1;// Unique ID
+    string type = 2;// Mesh name
+    string colour = 3;// Mesh colour
+    Location location = 4;
+}
+
+message Puzzle {
+    Outline outline = 1;
+    repeated Block block = 3;
+    repeated Goal goal = 4;
+    repeated Portal portal = 5;
+    repeated Sphere sphere = 6;
+    string description = 7;// Tutorial: Tap to Drop, Swipe to Rotate
+}
+
+message Move {
+    fixed64 timestamp = 1;
+    string key = 2;
+    Location value = 3;
+}
+
+message Solution {
+    fixed64 timestamp = 1;
+    repeated Move move = 2;
+}
