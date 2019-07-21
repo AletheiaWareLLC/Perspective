@@ -17,4 +17,4 @@
 set -e
 set -x
 
-protoc perspective.proto $@
+protoc --proto_path=../Joy --proto_path=. perspective.proto $@

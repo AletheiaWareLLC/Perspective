@@ -23,11 +23,14 @@ option optimize_for = LITE_RUNTIME;
 
 package perspective;
 
+import "joy.proto";
+
 message World {
     string name = 1;
     uint32 size = 2;
-    repeated bytes puzzle = 3;
-    map<string, bytes> shader = 4;
+    string colour = 3;
+    repeated Puzzle puzzle = 4;
+    map<string, joy.Shader> shader = 5;
 }
 
 message Location {
