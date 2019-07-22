@@ -28,7 +28,7 @@ import "joy.proto";
 message World {
     string name = 1;
     uint32 size = 2;
-    string colour = 3;
+    string colour = 3; // Background colour
     repeated Puzzle puzzle = 4;
     map<string, joy.Shader> shader = 5;
 }
@@ -41,27 +41,27 @@ message Location {
 }
 
 message Outline {
-    string type = 1;// Mesh name
+    string mesh = 1;
     string colour = 2;// Mesh colour
 }
 
 message Block {
     string name = 1;// Unique ID
-    string type = 2;// Mesh name
+    string mesh = 2;
     string colour = 3;// Mesh colour
     Location location = 4;
 }
 
 message Goal {
     string name = 1;// Unique ID
-    string type = 2;// Mesh name
+    string mesh = 2;
     string colour = 3;// Mesh colour
     Location location = 4;
 }
 
 message Portal {
     string name = 1;// Unique ID
-    string type = 2;// Mesh name
+    string mesh = 2;
     string colour = 3;// Mesh colour
     Location location = 4;
     Location link = 5;
@@ -69,7 +69,7 @@ message Portal {
 
 message Sphere {
     string name = 1;// Unique ID
-    string type = 2;// Mesh name
+    string mesh = 2;
     string colour = 3;// Mesh colour
     Location location = 4;
 }
