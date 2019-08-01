@@ -80,7 +80,15 @@ message Puzzle {
     repeated Goal goal = 4;
     repeated Portal portal = 5;
     repeated Sphere sphere = 6;
-    string description = 7;// Tutorial: Tap to Drop, Swipe to Rotate
+    // Tutorial: Tap to Drop, Swipe to Rotate, Use the Block
+    // Other: puzzle number
+    string description = 7;
+    // Lower score (ie fewer rotations) are better
+    // hit target: 3 stars
+    // target + 1: 2 stars
+    // target + 2: 1 star
+    // else: no stars
+    uint32 target = 8;
 }
 
 message Move {
@@ -92,4 +100,5 @@ message Move {
 message Solution {
     fixed64 timestamp = 1;
     repeated Move move = 2;
+    uint32 score = 3;
 }
