@@ -85,9 +85,11 @@ message Puzzle {
     // Other: puzzle number
     string description = 7;
     // Lower score (ie fewer rotations) are better
-    // hit target: 3 stars
-    // target + 1: 2 stars
-    // target + 2: 1 star
+    // hit target: 5 stars
+    // target + 1: 4 stars
+    // target + 2: 3 stars
+    // target + 3: 2 stars
+    // target + 4: 1 star
     // else: no stars
     uint32 target = 8;
 }
