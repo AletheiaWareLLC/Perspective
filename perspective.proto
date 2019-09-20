@@ -19,7 +19,6 @@ syntax = "proto3";
 option go_package = "github.com/AletheiaWareLLC/perspectivego";
 option java_outer_classname = "PerspectiveProto";
 option java_package = "com.aletheiaware.perspective";
-option optimize_for = LITE_RUNTIME;
 
 package perspective;
 
