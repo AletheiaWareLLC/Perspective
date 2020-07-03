@@ -42,42 +42,47 @@ message Location {
 }
 
 message Outline {
-    string mesh = 1;
+    string mesh = 1;// Mesh name
     string colour = 2;// Mesh colour
     string texture = 3;// Mesh texture
+    string material = 4;// Mesh material
 }
 
 message Block {
     string name = 1;// Unique ID
-    string mesh = 2;
+    string mesh = 2;// Mesh name
     string colour = 3;// Mesh colour
     Location location = 4;
     string texture = 5;// Mesh texture
+    string material = 6;// Mesh material
 }
 
 message Goal {
     string name = 1;// Unique ID
-    string mesh = 2;
+    string mesh = 2;// Mesh name
     string colour = 3;// Mesh colour
     Location location = 4;
     string texture = 5;// Mesh texture
+    string material = 6;// Mesh material
 }
 
 message Portal {
     string name = 1;// Unique ID
-    string mesh = 2;
+    string mesh = 2;// Mesh name
     string colour = 3;// Mesh colour
     Location location = 4;
     Location link = 5;
     string texture = 6;// Mesh texture
+    string material = 7;// Mesh material
 }
 
 message Sphere {
     string name = 1;// Unique ID
-    string mesh = 2;
+    string mesh = 2;// Mesh name
     string colour = 3;// Mesh colour
     Location location = 4;
     string texture = 5;// Mesh texture
+    string material = 6;// Mesh material
 }
 
 message Puzzle {
