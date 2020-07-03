@@ -31,6 +31,7 @@ message World {
     string foreground_colour = 4;
     repeated Puzzle puzzle = 5;
     map<string, joy.Shader> shader = 6;
+    string title = 7;
 }
 
 message Location {
