@@ -49,6 +49,14 @@ message Outline {
     string shader = 5;// Mesh shader
 }
 
+message Sky {
+    string mesh = 1;// Mesh name
+    string colour = 2;// Mesh colour
+    string texture = 3;// Mesh texture
+    string material = 4;// Mesh material
+    string shader = 5;// Mesh shader
+}
+
 message Block {
     string name = 1;// Unique ID
     string mesh = 2;// Mesh name
@@ -107,6 +115,7 @@ message Puzzle {
     // target + 4: 1 star
     // else: no stars
     uint32 target = 8;
+    Sky sky = 9;
 }
 
 message Move {
