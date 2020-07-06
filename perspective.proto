@@ -46,6 +46,7 @@ message Outline {
     string colour = 2;// Mesh colour
     string texture = 3;// Mesh texture
     string material = 4;// Mesh material
+    string shader = 5;// Mesh shader
 }
 
 message Block {
@@ -55,6 +56,7 @@ message Block {
     Location location = 4;
     string texture = 5;// Mesh texture
     string material = 6;// Mesh material
+    string shader = 7;// Mesh shader
 }
 
 message Goal {
@@ -64,6 +66,7 @@ message Goal {
     Location location = 4;
     string texture = 5;// Mesh texture
     string material = 6;// Mesh material
+    string shader = 7;// Mesh shader
 }
 
 message Portal {
@@ -74,6 +77,7 @@ message Portal {
     Location link = 5;
     string texture = 6;// Mesh texture
     string material = 7;// Mesh material
+    string shader = 8;// Mesh shader
 }
 
 message Sphere {
@@ -83,6 +87,7 @@ message Sphere {
     Location location = 4;
     string texture = 5;// Mesh texture
     string material = 6;// Mesh material
+    string shader = 7;// Mesh shader
 }
 
 message Puzzle {
