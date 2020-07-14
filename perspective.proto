@@ -116,6 +116,29 @@ message Puzzle {
     // else: no stars
     uint32 target = 8;
     Sky sky = 9;
+    repeated Dialog dialog = 10;
+    repeated Scenery scenery = 11;
+}
+
+message Dialog {
+    string name = 1;// Unique ID
+    string type = 2;// Dialog Type
+    string background_colour = 3;
+    string foreground_colour = 4;
+    string author = 5;// Message Author
+    string content = 6;// Message Content
+    Location location = 7;// Trigger Location
+    repeated string element = 8;// Referenced Elements
+}
+
+message Scenery {
+    string name = 1;// Unique ID
+    string mesh = 2;// Mesh name
+    string colour = 3;// Mesh colour
+    Location location = 4;
+    string texture = 5;// Mesh texture
+    string material = 6;// Mesh material
+    string shader = 7;// Mesh shader
 }
 
 message Move {
